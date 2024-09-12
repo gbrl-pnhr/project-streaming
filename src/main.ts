@@ -1,11 +1,23 @@
-import './assets/main.css'
+import './index.css';
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import PrimeVue from 'primevue/config';
+import Aura from '@primevue/themes/aura';
+import { setComponentPrime } from './modules/component-primevue.module';
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
+setComponentPrime(app);
 
-app.mount('#app')
+app.use(PrimeVue, {
+    theme: {
+      preset: Aura,
+      options: {
+        prefix: "p",
+        darkModeSelector: "white",
+        cssLayer: false,
+      },
+    },
+  });
+app.mount('#app');
