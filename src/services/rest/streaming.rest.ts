@@ -1,4 +1,4 @@
-import type { QueryParams } from '@/models/query-params';
+import type { QueryParams } from '@/models/query-params.model';
 import api from '@/services/api-config/rxjs-config';
 import type { Observable } from 'rxjs';
 
