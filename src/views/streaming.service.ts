@@ -20,8 +20,7 @@ export class StreamingService {
             this.streaming$.next(response);
           }
         },
-        error: (err) => {
-          console.error("Falha na requisição", err);
+        error: () => {
           alert("Falha na requisição");
         }
       });
