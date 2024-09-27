@@ -4,6 +4,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import PrimeVue from "primevue/config";
+import 'primeicons/primeicons.css';
 import { setComponent } from './modules/component.module';
 import { setComponentPrime } from './modules/component-primevue.module';
 

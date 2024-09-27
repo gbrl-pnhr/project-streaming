@@ -6,8 +6,16 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      redirect: {
+        path: '/home/1'
+      },
       name: 'home',
-      component: HomeView
+      children: [
+        {
+          path: '/home/:page',
+          component: HomeView
+        }
+      ]
     },
     {
       path: '/about',

@@ -34,8 +34,8 @@ export default {
 
 <template>
   <main>
-    <div :streamingPosters="allStramings">
-      <page-structure/>
+    <div>
+      <page-structure :streamingPosters="allStreamings"/>
     </div>
   </main>
 </template>
